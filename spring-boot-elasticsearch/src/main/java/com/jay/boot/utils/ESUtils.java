@@ -40,6 +40,7 @@ public class ESUtils {
 
 
     public static RestHighLevelClient getInstance() {
+        //设置ssl身份验证
         CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(USERNAME, PASSWORD));
 
