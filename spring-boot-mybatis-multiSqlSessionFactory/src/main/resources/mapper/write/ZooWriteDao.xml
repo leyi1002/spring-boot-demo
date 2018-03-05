@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jay.boot.dao.write.ZooWriteDao">
+
+    <resultMap id="zooMap" type="com.jay.boot.bean.Zoo">
+        <id property="id" column="id"/>
+        <result property="place" column="place"/>
+        <result property="animalsCount" column="animals_count"/>
+    </resultMap>
+
+    <insert id="insert">
+        insert into zoo(id,place,animals_count)
+        values(#{id},#{place},#{animalsCount})
+    </insert>
+</mapper>
